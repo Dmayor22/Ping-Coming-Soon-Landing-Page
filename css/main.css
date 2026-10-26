@@ -1,8 +1,9 @@
 :root {
-  --primary-color: #3498db;
-  --secondary-color: #2ecc71;
-  --base-padding: 16px;
-  --main-font: "Helvetica", sans-serif;
+  --primary-color: hsl(223, 87%, 63%);
+  --secondary-blue: hsl(223, 100%, 88%);
+  --secondary-red: hsl(223, 100%, 88%);
+  --neutral-gray: hsl(0, 0%, 59%);
+  --neutral-blue: hsl(209, 33%, 12%);
 }
 
 * {
@@ -17,6 +18,8 @@ body {
   justify-content: center;
   margin: 20px auto;
   max-width: 1440px;
+  font-size: 20px;
+  font-family: "Libre Franklin", sans-serif;
 }
 .container {
   border: 2px solid red;
