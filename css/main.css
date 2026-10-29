@@ -89,6 +89,11 @@ button {
   font-weight: 600;
 }
 
+button:hover {
+  /* background-color: var(--secondary-blue); */
+  opacity: 0.6;
+}
+
 .chart > img {
   width: 100%;
 }
