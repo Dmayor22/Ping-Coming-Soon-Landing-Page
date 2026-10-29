@@ -16,26 +16,24 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 20px auto;
   max-width: 1440px;
   font-size: 20px;
+  margin: 0 auto;
   font-family: "Libre Franklin", sans-serif;
 }
 .container {
   text-align: center;
-  height: 100vh;
   width: 620px;
   padding: 20px;
 }
 
 .container > img {
   width: 70px;
-  margin: 10px 0 30px 0;
+  margin-bottom: 30px;
 }
 
 #launch {
   color: var(--neutral-gray);
-  font-family: 300;
 }
 p#lauching {
   font-size: 2rem;
@@ -47,12 +45,9 @@ p#subcribe {
   font-size: 17px;
 }
 
-.user_subscribe {
-  margin: 30px 0 80px 0;
-}
-
-.user_subscribe > form {
+form {
   display: flex;
+  margin: 30px 0 80px 0;
   align-items: center;
   gap: 10px;
 }
@@ -61,7 +56,6 @@ input {
   flex-basis: 65%;
   padding: 13px 20px;
   border-radius: 20px;
-  border: none;
   border: 1px solid var(--neutral-gray);
   outline: none;
 }
@@ -73,6 +67,7 @@ button {
   background: var(--primary-color);
   cursor: pointer;
   color: #fff;
+  outline: none;
   box-shadow: 2px 6px 10px var(--secondary-blue);
   font-weight: 600;
 }
@@ -96,6 +91,5 @@ button {
   font-size: 13px;
   color: var(--neutral-gray);
 }
-
 
 /* responsiveness */
