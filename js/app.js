@@ -17,6 +17,10 @@ if (submitForm) {
 
       emailInput.style.borderColor = "red";
 
+      emailInput.addEventListener("input", () => {
+        emailInput.style.borderColor = "hsl(0, 0%, 59%)";
+        errMsg.style.display = "none";
+      });
       return false;
     }
 
