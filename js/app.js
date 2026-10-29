@@ -1,25 +1,28 @@
 // variables
 const emailInput = document.getElementById("email");
+const MobileEmail = document.getElementById("Mobileemail");
 const submitForm = document.getElementById("submit");
+const MobileSubmit = document.getElementById("MobileSubmit");
 const errMsg = document.querySelector("#errorMessage");
+const MobileErrorMessage = document.querySelector("#MobileerrorMessage");
 
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-if (submitForm) {
-  submitForm.addEventListener("submit", (e) => {
+function handleSubmit(formType, emailType, errType) {
+  formType.addEventListener("submit", (e) => {
     e.preventDefault();
 
-    const inputValue = emailInput.value.trim().toLowerCase();
+    const inputValue = emailType.value.trim().toLowerCase();
 
     if (!inputValue || !emailRegex.test(inputValue)) {
-      errMsg.textContent = "Please provide a valid emaail address";
-      errMsg.style.display = "block";
+      errType.textContent = "Please provide a valid email address";
+      errType.style.display = "block";
 
-      emailInput.style.borderColor = "red";
+      emailType.style.borderColor = "red";
 
-      emailInput.addEventListener("input", () => {
-        emailInput.style.borderColor = "hsl(0, 0%, 59%)";
-        errMsg.style.display = "none";
+      emailType.addEventListener("input", () => {
+        emailType.style.borderColor = "hsl(0, 0%, 59%)";
+        errType.style.display = "none";
       });
       return false;
     }
@@ -27,7 +30,15 @@ if (submitForm) {
     if (inputValue) {
       alert("email submitted");
 
-      emailInput.value = " ";
+      emailType.value = " ";
     }
   });
+}
+
+if (submitForm) {
+  handleSubmit(submitForm, emailInput, errMsg);
+}
+
+if (MobileSubmit) {
+  handleSubmit(MobileSubmit, MobileEmail, MobileErrorMessage);
 }

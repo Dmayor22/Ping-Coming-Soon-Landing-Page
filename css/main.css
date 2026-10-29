@@ -49,6 +49,10 @@ p#subcribe {
   margin: 30px 0 80px 0;
 }
 
+.mobile_container {
+  display: none;
+}
+
 form {
   display: flex;
   align-items: center;
@@ -106,3 +110,32 @@ button {
 }
 
 /* responsiveness */
+@media (max-width: 375px) {
+  body {
+    max-width: 375px;
+  }
+
+  form {
+    flex-direction: column;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  .form_container {
+    display: none;
+  }
+
+  .mobile_container {
+    display: block;
+    margin: 30px 0 80px 0;
+  }
+
+  #MobileerrorMessage {
+    color: red;
+    font-size: 12px;
+    margin-bottom: 10px;
+    display: none;
+  }
+}
