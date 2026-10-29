@@ -35,16 +35,19 @@
       </p>
       <p id="subcribe">Subscribe and get notified</p>
 
-      <form>
-        <input
-          type="email"
-          name=""
-          id=""
-          required
-          placeholder="Your email address..."
-        />
-        <button type="submit">Notify Me</button>
-      </form>
+      <div class="form_container">
+        <form id="submit">
+          <input
+            type="email"
+            name="email"
+            id="email"
+            required
+            placeholder="Your email address..."
+          />
+          <button type="submit">Notify Me</button>
+        </form>
+        <p id="errorMessage"></p>
+      </div>
 
       <div class="chart">
         <img src="./images/illustration-dashboard.png" alt="" />
@@ -58,6 +61,8 @@
         <p>&copy; Copyright Ping. All rights reserved</p>
       </div>
     </div>
+
+    <script src="./js/app.js"></script>
   </body>
 </html>
 ~
